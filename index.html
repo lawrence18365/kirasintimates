@@ -3039,15 +3039,84 @@
                 flex: 0 0 auto;
             }
             
-            .banner p {
-                font-size: 0.8rem;
-            }
-            
             .footer-links {
                 flex-direction: column;
                 gap: var(--spacing-sm);
             }
         }
+/* Add these rules to your existing CSS or in the media query sections */
+
+@media (max-width: 768px) {
+    /* Banner improvements */
+    .banner {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .banner-content {
+        justify-content: space-between; /* Better space distribution */
+    }
+    
+    .banner p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        text-align: left;
+        flex: 1; /* Take available space */
+    }
+    
+    .banner-icon {
+        font-size: 0.9rem; /* Slightly smaller icon */
+    }
+    
+    .banner-close {
+        padding: 8px; /* Larger tap target */
+        margin-left: var(--spacing-xs);
+    }
+    
+    /* Adjust header position based on banner */
+    header {
+        top: auto; /* Remove fixed distance */
+    }
+    
+    .header-scrolled {
+        top: 0;
+    }
+    
+    /* Ensure hero section has proper spacing */
+    .hero-section {
+        padding-top: 130px; /* Adjust based on banner + header height */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Extra small screens */
+    .banner {
+        padding: var(--spacing-xxs) var(--spacing-xs);
+    }
+    
+    .banner p {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .banner strong {
+        display: block; /* Stack for better readability */
+        margin-bottom: 2px;
+    }
+    
+    .banner-icon {
+        display: none; /* Hide on very small screens to save space */
+    }
+    
+    .banner-close {
+        font-size: 1.1rem;
+        padding: 10px; /* Even larger tap target for tiny screens */
+    }
+    
+    /* Further adjust hero based on smaller banner */
+    .hero-section {
+        padding-top: 120px;
+    }
+}
     </style>
 </head>
 <body>
